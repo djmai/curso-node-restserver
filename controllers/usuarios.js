@@ -59,15 +59,8 @@ const usuariosPatch = (req, res = response) => {
 }
 
 const usuariosDelete = async (req, res = response) => {
-
   const { id } = req.params;
-
-  // Borrado fisicamente
-  // const usuario = await Usuario.findByIdAndDelete(id);
-
-  // Borrado digital para mantener la integridad
   const usuario = await Usuario.findByIdAndUpdate(id, { estado: false });
-
   res.send(usuario);
 }
 
