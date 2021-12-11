@@ -4,6 +4,9 @@ const { buscar } = require('../controllers/buscar');
 
 
 const router = Router();
+/**
+ * *{{url}}/api/uploads
+ * */
 
 router.get(
   '/:coleccion/:termino',
